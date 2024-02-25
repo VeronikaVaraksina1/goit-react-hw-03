@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: #f4f5f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,6 +39,7 @@ a {
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
 }
 
