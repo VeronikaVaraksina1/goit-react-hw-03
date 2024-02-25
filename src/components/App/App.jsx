@@ -7,12 +7,13 @@ import ContactForm from '../ContactForm/ContactForm';
 
 const App = () => {
   const [contacts, setContacts] = useState(
-    () => JSON.parse(localStorage.getItem('saved-contacts')) ?? { id: '', name: '', number: '' }
+    () => JSON.parse(localStorage.getItem('saved-contacts')) ?? []
   );
+
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    window.localStorage.setItem('saved-contacts', JSON.stringify(contacts));
+    localStorage.setItem('saved-contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const filterContacts = contacts.filter(contact =>
